@@ -18,6 +18,11 @@ The first thing to do is to reproduce the DNN described in the article: Automati
 ### Trainning and Validation with public datasources
 #### 1) We train the network with public data from french political debates. Those audio files are sliced in 3 seconds samples, that are extracted each 1.5 seconds, giving some overlap on the trainning data. Those samples are rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. We used X samples corresponding to .. Hrs of audio files.
 
+Instead of starting with Regression, we first created a classification model.
+
+Then a regression model.
+
+Then a regression model with log-mel cepstral coeficients (Similar results?) (How about computational costs?)
 
 
 ## Baseline
