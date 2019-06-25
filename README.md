@@ -9,7 +9,6 @@ Besides, the first thing that we imagine in order to perform this kind of sentim
 
 ## Starting point
 
-
 The first thing to do is to reproduce the DNN described in the article: Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls. in this article we have two stages of trainning.
 
 ### Trainning and Validation with public datasources
