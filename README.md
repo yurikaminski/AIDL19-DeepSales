@@ -1,5 +1,5 @@
 <a href="https://www.deepsales.io/">
-    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Logo%20escura.png" alt="DeepSales logo" title="DeepSales" align="right" height="60" />
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Logo%20escura.png" alt="DeepSales logo" title="DeepSales" align="right" height="40" />
 </a>
 
 AIDL19-DeepSales
@@ -50,7 +50,7 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 ## Some features visualizations
 
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png">
-    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png" alt="avg_pooling_2d_1" title="2D Average pooling 1" align="center" width:"50%" height:"auto"/>
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png" alt="avg_pooling_2d_1" title="2D Average pooling 1" align="center" width:"auto" height:"25%"/>
 </a>
 
 
