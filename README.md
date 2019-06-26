@@ -27,6 +27,15 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 
 ## Baseline
 ## Experiments
+
+| Id | Number of epochs|Time           | Accuracy  |
+|----|:-------------   |:-------------:|     -----:|
+|1| 5     | right-aligned | $1600 |
+|2| 10      | centered      |   $12 |
+|3| 15  | are neat      |    $1 |
+|4| 25  | are neat      |    $1 |
+
+
 ## Issues
 ## Further work and next steps
 
