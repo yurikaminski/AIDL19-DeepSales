@@ -13,10 +13,12 @@ Besides, the first thing that we imagine in order to perform this kind of sentim
 
 ## Starting point
 
-The first thing to do is to reproduce the DNN described in the article: Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls. in this article we have two stages of trainning.
+The first thing to do is to reproduce the DNN described in the article: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://link.springer.com/chapter/10.1007/978-3-319-49169-1_25). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
 ### Trainning and Validation with public datasources
-#### 1) We train the network with public data from french political debates. Those audio files are sliced in 3 seconds samples, that are extracted each 1.5 seconds, giving some overlap on the trainning data. Those samples are rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. We used X samples corresponding to .. Hrs of audio files.
+... 1) We train the network with public data from french political debates. Those audio files are sliced in 3 seconds samples, that are extracted each 1.5 seconds, giving some overlap on the trainning data. Those samples are rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. We used X samples corresponding to .. Hrs of audio files.
+
+Based on this original network, we did some adaptation in order to make it classify the audios in Conflict or No conflict to accelerate trainning and facilitate debugging in a first moment.
 
 Instead of starting with Regression, we first created a classification model.
 
@@ -24,8 +26,9 @@ Then a regression model.
 
 Then a regression model with log-mel cepstral coeficients (Similar results?) (How about computational costs?)
 
+## Dataset preparation
 
-## Baseline
+
 ## Experiments
 
 | Exp. | Number of epochs|Time to train  | Accuracy  |
