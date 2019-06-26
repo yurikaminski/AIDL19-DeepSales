@@ -50,7 +50,7 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 ## Some features visualizations
 
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png">
-    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png" alt="avg_pooling_2d_1" title="2D Average pooling 1" align="center" tyle="width: 50%; height:auto;"/>
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png" alt="avg_pooling_2d_1" title="2D Average pooling 1" align="center" style="width: 50%; height: auto"/>
 </a>
 
 
