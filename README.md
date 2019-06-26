@@ -1,4 +1,4 @@
-# AIDL19-DeepSales (https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Logo%20escura.png)
+# AIDL19-DeepSales ![alt text](https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Logo%20escura.png "DeepSales")
 ## The problem
 
 The final goal of this project is to predict Customer Satisfaction Index from calls using end-to-end speech recognition on raw audio files. Classic speech recognition translates each phoneme or word to a specific writen form in order to create words and sentences. In end-to-end speech recognition, we map features directly from speech and use them to make classification or regression models.
