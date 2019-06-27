@@ -28,6 +28,8 @@ Once the system have learned the conflict features in vocal speech, we can adapt
 
 Based on this original network, we did some adaptation in order to make it classify the audios in Conflict or No conflict to accelerate trainning and facilitate debugging in a first moment.
 
+After predicting the class for each interval we built a code to apply the classification to the full audio files by averaging the results of each chunk and classifying it in the 2 classes (Conflict or not conflict).
+
 Instead of starting with Regression, we first created a classification model.
 
 Then a regression model.
