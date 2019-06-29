@@ -71,3 +71,9 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 ## Further work and next steps
 
 
+
+final inference (on test data):
+https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/inferences_full_files.ipynb
+
+result analysis:
+https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/results/results_analysis.ipynb
