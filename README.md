@@ -79,9 +79,24 @@ These are the predictions metrics for whole files. In the first case, we include
 ## Checking out the class separation in the last layer
 To check the capacity of class separation of the network we performed a PCA (Principal Component Analysis) on the last Maxout layer. The dimension of the output vector in this layer is 64. We performed a PCA on the dataset conformed by the predictions of the test samples (chunks) 
 
+The factor map shows a strong correlation between the variables of the 64-d map and the first principal component.
+
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA factor map.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA factor map.png" alt="PCA factor map" title="PCA factor map" align="center" width:"auto" height:"25%"/>
 </a>
+
+In fact, the first component captures around 90% of the total variance as we can see in the following screeplot
+
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA screeplot.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA screeplot.png" alt="PCA screeplot" title="PCA screeplot" align="center" width:"auto" height:"25%"/>
+</a>
+
+If we plot the individuals map, we can see that even though the separation is not perfect, there are more or less separated in the first component
+
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA individuals.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA individuals.png" alt="PCA individual map" title="PCA individual map" align="center" width:"auto" height:"25%"/>
+</a>
+
 
 ## Further work and next steps
 
