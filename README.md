@@ -81,7 +81,8 @@ We made 2 experiments to predict the class of an audio file:
 |1 | 0.78  |   0.65|   0.71|      119|
 
 Accuracy
-|Class| Precision | Recall | F1-score | Support  |
+
+|Metrics| Precision | Recall | F1-score | Support  |
 |:-----|:---------:|:-------:|:-----:|-----:|
 |Macro avg | 0.78    |  0.76   |   0.76     |  286|
 |Weighted avg| 0.78    |  0.78   |   0.77     |  286|
