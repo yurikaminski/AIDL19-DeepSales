@@ -69,9 +69,29 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 ## Results
 These are the predictions metrics for whole files. In the first case, we include the metrics for predicting audio chunks (3 seconds intervals). In the second one, we include the metrics for whole files. The prediction for a audio file is computed both, averaging the prediction for chunks and using majority voting
 
-# Results on audio chunks
+We made 2 experiments to predict the class of an audio file:
 
-# Results on whole files
+1. Counting the number of audios in a class.
+precision    recall  f1-score   support
+
+           0       0.78      0.87      0.82       167
+           1       0.78      0.65      0.71       119
+
+    accuracy                           0.78       286
+   macro avg       0.78      0.76      0.76       286
+weighted avg       0.78      0.78      0.77       286
+
+2. Averaging the values of the classes and classifying it in the end.
+precision    recall  f1-score   support
+
+           0       0.79      0.88      0.84       167
+           1       0.80      0.68      0.74       119
+
+    accuracy                           0.80       286
+   macro avg       0.80      0.78      0.79       286
+weighted avg       0.80      0.80      0.79       286
+
+ Performance of the model selecting the majority class for each audio file
 
 ## Checking out the class separation in the last layer
 To check the capacity of class separation of the network we performed a PCA (Principal Component Analysis) on the last Maxout layer. The dimension of the output vector in this layer is 64. We performed a PCA on the dataset conformed by the predictions of the test samples (chunks)
