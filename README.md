@@ -55,9 +55,6 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/avg_pooling_2d_1.png" alt="avg_pooling_2d_1" title="2D Average pooling 1" align="center" width:"auto" height:"25%"/>
 </a>
 
-
-
-
 ## Issues
 ### Trainning
 1. Data was too big to fit in memory
@@ -72,10 +69,11 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 ## Results
 These are the predictions metrics for whole files. In the first case, we include the metrics for predicting audio chunks (3 seconds intervals). In the second one, we include the metrics for whole files. The prediction for a audio file is computed both, averaging the prediction for chunks and using majority voting
 
-### Results on audio chunks
+# Results on audio chunks
 
-## Results on whole files 
-# Checking out the class separation in the last layer
+# Results on whole files
+
+## Checking out the class separation in the last layer
 To check the capacity of class separation of the network we performed a PCA (Principal Component Analysis) on the last Maxout layer. The dimension of the output vector in this layer is 64. We performed a PCA on the dataset conformed by the predictions of the test samples (chunks)
 
 The factor map shows a strong correlation between the variables of the 64-d map and the first principal component.
@@ -95,8 +93,6 @@ If we plot the individuals map, we can see that even though the separation is no
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA individuals.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA individuals.png" alt="PCA individual map" title="PCA individual map" align="center" width:"auto" height:"25%"/>
 </a>
-
-
 
 ## Further work and next steps
 
