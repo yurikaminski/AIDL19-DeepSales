@@ -81,7 +81,8 @@ We evaluated the metrics for whole files. We made 2 experiments to predict the c
 
           
 
-2. Averaging the values of the classes and classifying it in the end (If the average >= 0.5, then 1; Else 0)
+2. Averaging the values of the classes and classifying it in the end (If the average >= 0.5, then 1; Else 0).
+
 |Class| Precision | Recall | F1-score | Support  |
 |:-----|:---------:|:-------:|:-----:|-----:|
 |0 | 0.79 |    0.88|  0.84 |      167|
