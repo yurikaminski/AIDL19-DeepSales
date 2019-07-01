@@ -74,14 +74,19 @@ These are the predictions metrics for whole files. In the first case, we include
 We made 2 experiments to predict the class of an audio file:
 
 1. Counting the number of audios in a class.
-precision    recall  f1-score   support
 
-           0       0.78      0.87      0.82       167
-           1       0.78      0.65      0.71       119
+|Class| Precision | Recall | F1-score | Support  |
+|:-----|:---------:|:-------:|:-----:|-----:|
+|0 | 0.78 |    0.87|  0.82 |      167|
+|1 | 0.78  |   0.65|   0.71|      119|
 
-    accuracy                           0.78       286
-   macro avg       0.78      0.76      0.76       286
-weighted avg       0.78      0.78      0.77       286
+Accuracy
+|Class| Precision | Recall | F1-score | Support  |
+|:-----|:---------:|:-------:|:-----:|-----:|
+|Macro avg | 0.78    |  0.76   |   0.76     |  286|
+|Weighted avg| 0.78    |  0.78   |   0.77     |  286|
+
+          
 
 2. Averaging the values of the classes and classifying it in the end.
 precision    recall  f1-score   support
