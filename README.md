@@ -6,6 +6,16 @@ AIDL19-DeepSales
 ================
 ## Files summary
 
+|Description| source |
+|:-----|:---------:|
+|Notebook of inference results on independent test set| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/results/results_analysis.ipynb| 
+|data generation for PCA visualization (last maxout layer with dimension 64)| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/VISUALIZATION_generate_data_for_PCA.ipynb| 
+|Visualization of some activation maps| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/VISUALIZATION_visualize_model.ipynb| 
+|Model definition and training for classification| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/model_paper_training.ipynb| 
+|Notebook for doing inference of full audio files| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/inferences_full_files.ipynb| 
+|Data preparation. Creation of split files (train, validation and test) and creation of tf.records| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/data_preparation_classification.ipynb| 
+
+
 ## The problem
 
 The final goal of this project is to predict Customer Satisfaction Index from calls using end-to-end speech recognition on raw audio files. Classic speech recognition translates each phoneme or word to a specific writen form in order to create words and sentences. In end-to-end speech recognition, we map features directly from speech and use them to make classification or regression models.
