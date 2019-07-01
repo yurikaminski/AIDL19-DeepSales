@@ -6,6 +6,16 @@ AIDL19-DeepSales
 ================
 ## Files summary
 
+|Description| source |
+|:-----|:---------:|
+|Notebook of inference results on independent test set| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/results/results_analysis.ipynb| 
+|data generation for PCA visualization (last maxout layer with dimension 64)| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/VISUALIZATION_generate_data_for_PCA.ipynb| 
+|Visualization of some activation maps| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/VISUALIZATION_visualize_model.ipynb| 
+|Model definition and training for classification| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/model_paper_training.ipynb| 
+|Notebook for doing inference of full audio files| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/inferences_full_files.ipynb| 
+|Data preparation. Creation of split files (train, validation and test) and creation of tf.records| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/data_preparation_classification.ipynb| 
+
+
 ## The problem
 
 The final goal of this project is to predict Customer Satisfaction Index from calls using end-to-end speech recognition on raw audio files. Classic speech recognition translates each phoneme or word to a specific writen form in order to create words and sentences. In end-to-end speech recognition, we map features directly from speech and use them to make classification or regression models.
@@ -26,12 +36,9 @@ The first thing to do is to reproduce the DNN described in the article: [Automat
 We first train the network with public data from french political debates. Those audio files are sliced in 3 seconds samples, that are extracted each 1.5 seconds, giving some overlap on the trainning data. Those samples are rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. We used X samples corresponding to .. Hrs of audio files. Instead of starting with Regression, we first created a classification model.
 
 ### 2.Trainning and Validation with calls audio and their respective CSI
-Once the system have learned the conflict features in vocal speech, we can adapt the final layers to perform a slightly diferent task, feeding it with real calls. 
+Once the system have learned the conflict features in vocal speech, we can adapt the final layers to perform a slightly diferent task, feeding it with real calls. Based on this pre-trained network, we can adapt the final layers to proceed the classification of the audios in CSI notes from 1 to 5.
 
-Based on this original network, we did some adaptation in order to make it classify the audios in Conflict or No conflict to accelerate trainning and facilitate debugging in a first moment.
-
-After predicting the class for each interval we built a code to apply the classification to the full audio files by averaging the results of each chunk and classifying it in the 2 classes (Conflict or not conflict).
-
+As we have not succedded to obtain this kind of audio files, we let this part as next steps for the project.
 
 ## Dataset preparation
 
