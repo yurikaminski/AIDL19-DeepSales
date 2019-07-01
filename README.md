@@ -60,10 +60,10 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 
 ## Issues
 ### Trainning
-1) Data was too big to fit in memory
-    a) Tryed to use tf.records to use system memory.
-    b) Reduced the batch size from 200 samples to 55
-    c) Expanded GPU capacity from 12 to 16 Gb.
+* 1) Data was too big to fit in memory
+     * a) Tryed to use tf.records to use system memory.
+     * b) Reduced the batch size from 200 samples to 55
+     * c) Expanded GPU capacity from 12 to 16 Gb.
     
 ### Testing
 2) Incompatibility between tf and keras dataset formats
