@@ -23,7 +23,7 @@ Besides, the first thing that we imagine in order to perform this kind of sentim
 The first thing to do is to reproduce the DNN described in the article: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://link.springer.com/chapter/10.1007/978-3-319-49169-1_25). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
 ### 1.Trainning and Validation with public datasources
-We first train the network with public data from french political debates. Those audio files are sliced in 3 seconds samples, that are extracted each 1.5 seconds, giving some overlap on the trainning data. Those samples are rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. We used X samples corresponding to .. Hrs of audio files.
+We first train the network with public data from french political debates. Those audio files are sliced in 3 seconds samples, that are extracted each 1.5 seconds, giving some overlap on the trainning data. Those samples are rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. We used X samples corresponding to .. Hrs of audio files. Instead of starting with Regression, we first created a classification model.
 
 ### 2.Trainning and Validation with calls audio and their respective CSI
 Once the system have learned the conflict features in vocal speech, we can adapt the final layers to perform a slightly diferent task, feeding it with real calls. 
@@ -32,11 +32,6 @@ Based on this original network, we did some adaptation in order to make it class
 
 After predicting the class for each interval we built a code to apply the classification to the full audio files by averaging the results of each chunk and classifying it in the 2 classes (Conflict or not conflict).
 
-Instead of starting with Regression, we first created a classification model.
-
-Then a regression model.
-
-Then a regression model with log-mel cepstral coeficients (Similar results?) (How about computational costs?)
 
 ## Dataset preparation
 
