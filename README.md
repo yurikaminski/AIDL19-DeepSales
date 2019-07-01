@@ -79,6 +79,10 @@ These are the predictions metrics for whole files. In the first case, we include
 ## Checking out the class separation in the last layer
 To check the capacity of class separation of the network we performed a PCA (Principal Component Analysis) on the last Maxout layer. The dimension of the output vector in this layer is 64. We performed a PCA on the dataset conformed by the predictions of the test samples (chunks) 
 
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA factor map.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/Layers_Visualization_Conflict/PCA factor map.png" alt="PCA factor map" title="PCA factor map" align="center" width:"auto" height:"25%"/>
+</a>
+
 ## Further work and next steps
 
 
