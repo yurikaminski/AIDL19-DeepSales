@@ -70,10 +70,15 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
     a) We changed the input of the network from tf.dataset to Numpy arrays.
 
 ## Results
+These are the predictions metrics for whole files. In the first case, we include the metrics for predicting audio chunks (3 seconds intervals). In the second one, we include the metrics for whole files. The prediction for a audio file is computed both, averaging the prediction for chunks and using majority voting
+
 ### Results on audio chunks
 
 ### Results on whole files 
-These are the predictions metrics for whole files. In the first case, we include the metrics for predicting audio chunks (3 seconds intervals). In the second one, we include the metrics for whole files. The prediction for a audio file is computed both, averaging the prediction for chunks and using majority voting
+
+## Checking out the class separation in the last layer
+To check the capacity of class separation of the network we performed a PCA (Principal Component Analysis) on the last Maxout layer. The dimension of the output vector in this layer is 64. We performed a PCA on the dataset conformed by the predictions of the test samples (chunks) 
+
 ## Further work and next steps
 
 
