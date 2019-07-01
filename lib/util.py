@@ -40,11 +40,11 @@ def divide_audio_file(path, intervals_seconds, interval_step, sample_rate=8000):
 
     return np.array(audio_array)
 
-def get_chunks_from_raw(audio_path, file_names_df,intervals_seconds,sample_rate):
+def get_chunks_from_raw(audio_path, file_names_df,maxFiles,intervals_seconds,interval_step, sample_rate):
     
     x_data = []
     labels = []
-    tf_record_files = 1  
+    numFiles = 0
     for file in os.listdir(audio_path):
 
         file_path = audio_path + "/" + file
@@ -54,20 +54,22 @@ def get_chunks_from_raw(audio_path, file_names_df,intervals_seconds,sample_rate)
         if short_name in file_names_df["0"].values:
             print("reading file {}".format(file))
 
-            divided_file =  divide_audio_file(file_path, intervals_seconds, sample_rate)
+            divided_file =  divide_audio_file(file_path, intervals_seconds, interval_step)
 
             file_label = file_names_df[file_names_df["0"] == short_name]["class"].values[0]
             labels_array = np.ones(divided_file.shape[0]) * file_label
             
             x_data.extend(divided_file)
-            labels.extend(labels_array)            
-            
-                        
+            labels.extend(labels_array)  
+            numFiles = numFiles + 1
+            if (numFiles > maxFiles):
+                break
         else:
             print("file {} not in the dataframe".format(file))
        
                  
     return (x_data,labels)
+
 
 def predict_one_audio(model,file_path,label,intervals_seconds,sample_rate):
 #    file_path = audio_path + "/" + file_name
