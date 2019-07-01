@@ -68,6 +68,12 @@ Then a regression model with log-mel cepstral coeficients (Similar results?) (Ho
 ### Testing
 2) Incompatibility between tf and keras dataset formats
     a) We changed the input of the network from tf.dataset to Numpy arrays.
+
+## Results
+### Results on audio chunks
+
+### Results on whole files 
+These are the predictions metrics for whole files. In the first case, we include the metrics for predicting audio chunks (3 seconds intervals). In the second one, we include the metrics for whole files. The prediction for a audio file is computed both, averaging the prediction for chunks and using majority voting
 ## Further work and next steps
 
 
