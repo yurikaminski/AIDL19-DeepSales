@@ -9,6 +9,7 @@ AIDL19-DeepSales
 |Description| source |
 |:-----|:---------:|
 |Notebook of inference results on independent test set| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/results/results_analysis.ipynb| 
+|Inference demo and audio listening| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/DEMO_audio_inference.ipynb| 
 |data generation for PCA visualization (last maxout layer with dimension 64)| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/VISUALIZATION_generate_data_for_PCA.ipynb| 
 |Visualization of some activation maps| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/VISUALIZATION_visualize_model.ipynb| 
 |Model definition and training for classification| https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/model_paper_training.ipynb| 
