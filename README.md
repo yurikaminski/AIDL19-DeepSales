@@ -163,10 +163,3 @@ If we plot the individuals map, we can see that even though the separation is no
 
 ## Further work and next steps
 
-@Yuri:
-use these notebooks as reference in the readme for the final inference on test data and results analysis
-final inference (on test data):
-https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/inferences_full_files.ipynb
-
-result analysis:
-https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/results/results_analysis.ipynb
