@@ -46,18 +46,19 @@ a continuous conflict score in the range [−10, +10]._
 ### Dataset preparation
 To replicate the paper we need to prepare the data in an identical way. The audio files have a length of 30 seconds each with a sample rate of 48kHz, that represents huge vectors, size 1.440.000. For that reason the files were divided in intervals of 3 seconds and downsampled to 8kHz like in the paper, that gives us vectors with size 24.000. We also removed silences from the data but those revealed to be a rare occurrence.
 Finally, to have some data augmentation, when splitting the data in 3 seconds intervals we did a interval step of 1 second, that gave us intervals with 2 seconds of overlap and a lot more data to train.
-This step was not mentioned in the paper.   
+This step was not mentioned in the paper.
 
+#### tf.records
 Even with the downsampling of the data to 8kHz it would still be a problem to load all the data at once to have in memory.
 For that reason we decided to convert and save the data in the format of TF.records. With this we solved the issue of the lack of system memory to handle the data.
 
-### Training
+#### Data leakage
+Because we are dividing each file in diferent samples our first step while preparing the data was to divide the audio files in train, validation and test dataset. We don't want to have some samples of the same file in the training and validation data or, even worse, test data.
+Each dataset, train, validation and test, have different audio files, and the tf.records datasets were created based on those files
 
 
 
 
-
-We first train the network with public data from french political debates. We have files of 30 seconds of audio rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. For training, 30 seconds of audio represent very big vectors, we need to slice the files in intervals of 3 seconds.  We aslo start with a classification model, conflict or no conflict, instead of trying to predict the conflict level. 
 
 
 
