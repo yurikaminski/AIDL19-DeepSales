@@ -109,7 +109,7 @@ Since we were mixing TF.records with a model trained using Keras there are some 
 Our solution was to use directly numpy arrays instead tf.records tensors. This proved to work well and we managed to obtain the expected results
 
 
-## Results
+## [Results](https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/results/results_analysis.ipynb)
 We evaluated the metrics for whole files. We made 2 experiments to predict the class of an audio file:
 
 1. Counting the number of audios in a class.
