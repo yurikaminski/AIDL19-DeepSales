@@ -109,10 +109,11 @@ The validation curve follows very well the training curve which makes us to thin
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_25epochs.png" alt="validation_25epochs" title="validation_25epochs" align="center" width:"auto" height:"25%"/>
 </a>
 
+3. When we convert the label from score (-10 to 10) to a binary target (conflit/ no conflict), the resulting dataset was slightly unbalanced (60% of the samples were "no conflict"). Although it is not a hard unbalancing problem, we decide to use class weigthing for training the final model.
 
-3. As we do not have much more resources (time and GPU), we select the model trained with 25 epochs to obtain the metrics on test both on chunks and on whole data files (using both majority voting and output average). The results are summarized in the "results" section
+4. As we do not have much more resources (time and GPU), we select the model trained with 25 epochs to obtain the metrics on test both on chunks and on whole data files (using both majority voting and output average). The results are summarized in the "results" section
 
-4. The notebook DEMO_audio_inference (https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/DEMO_audio_inference.ipynb) plays a couple of audios (conflict and no confict) and shows the results of inference on each 3 second interval. Looking at that, we think that one of the thinks that the model learns is to detect when more than one speaker are talking at the same time or without pauses. If we look at the prediction of the final interval of the conflict audio, we can see that in this case the prediction is o (no conflict) because in this part of the audio, only one speaker is talking.
+5. The notebook DEMO_audio_inference (https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/DEMO_audio_inference.ipynb) plays a couple of audios (conflict and no confict) and shows the results of inference on each 3 second interval. Looking at that, we think that one of the thinks that the model learns is to detect when more than one speaker are talking at the same time or without pauses. If we look at the prediction of the final interval of the conflict audio, we can see that in this case the prediction is o (no conflict) because in this part of the audio, only one speaker is talking.
 
 
 ## Main Issues
