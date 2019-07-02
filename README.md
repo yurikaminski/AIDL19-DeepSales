@@ -132,6 +132,11 @@ In the following plot we can verify that the wrong predictions are these corresp
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/prediction_fails.png" alt="Prediction fails" title="Prediction fails" align="center" width:"auto" height:"25%"/>
 </a>
 
+Since we are predicting for small chunks of 3 seconds and the conflict label in the data is given for the full file we might end up with small chunks there are very hard to predict, that are not relevant for the final score.
+As we can see bellow there are some audio files where the prediction for the diferent chunks alternate a lot between one class and the other, these situations are hard to get right.   
+![](https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/Screenshot%20from%202019-07-02%2018-35-43.png)
+![](https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/Screenshot%20from%202019-07-02%2018-36-07.png) 
+
 
 ## Checking out the class separation in the last layer
 To check the capacity of class separation of the network we performed a PCA (Principal Component Analysis) on the last Maxout layer. The dimension of the output vector in this layer is 64. We performed a PCA on the dataset conformed by the predictions of the test samples (chunks)
