@@ -21,7 +21,7 @@ AIDL19-DeepSales
 
 The final goal of this project is to predict Customer Satisfaction Index from calls using raw audio files. 
 
-To achieve that goal, we first train our model with labelled data from French TV political debates aiming to find out salient information in raw speech that correlates with conflict level. Once the network is trained with this data, we want to use transfer learning in order to execute the CSI prediction task, we need to adapt the final layers to this different task.
+To achieve that goal, we first train our model with labelled data from Swiss TV political debates aiming to find out salient information in raw speech that correlates with conflict level. Once the network is trained with this data, we want to use transfer learning in order to execute the CSI prediction task, we need to adapt the final layers to this different task.
 
 From a business point of virew, this is a quite interesting application to Call Centers, since this task is performed manually in most of them by QA teams that evaluate a tiny fraction of the calls to audit quality, leaving behind more than 90% of the calls unaudited. The network could also be adapted to other tasks such as churn prediction, first call resolution, sales conversion and other important call center metrics.
 
@@ -31,7 +31,7 @@ As we have not succedded to obtain call center data for motives of privacy, we l
 
 The first thing to do is to reproduce the DNN described in the article: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://link.springer.com/chapter/10.1007/978-3-319-49169-1_25). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
-### 1.The Data
+### The Data
 The data is [freely available](http://www.dcs.gla.ac.uk/vincia/?p=270)   
 _The SSPNet Conflict Corpus (SC 2 ) was collected in the framework of the Social 
 Signal Processing Network (SSPNet), the European Network of Excellence on modelling,
@@ -41,23 +41,18 @@ corpus was used in the conflict challenge organized in the frame of the Interspe
 extracted from a collection of 45 Swiss political debates (in French), 138 subjects in
 total (23 females and 133 males). The clips have been annotated in terms of conflict
 level by roughly 550 assessors, recruited via Amazon Mechanical Turk, and assigned
-a continuous conflict score in the range [−10, +10]._
+a continuous conflict score in the range [−10, +10]._  
 
-### 2.Trainning and Validation with public datasources
+### Dataset preparation
 
 We first train the network with public data from french political debates. We have files of 30 seconds of audio rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. For training, 30 seconds of audio represent very big vectors, we need to slice the files in intervals of 3 seconds.   We aslo start with a classification model, conflict or no conflict, instead of trying to predict the conflict level. 
 
 
 
 
-
-
-## Dataset preparation
-
-
 ## Experiments
 
-We performed different experiments to validsate the final model. As a additiona information training the model on Google Cloud the ETA for each epoch was arround 10 minutes.
+We performed different experiments to validate the final model. As a additional information training the model on Google Cloud the ETA for each epoch was around 10 minutes.
 
 1. First, we tried the model to overfit by training the model with a few number of samples and droping the regularization layers (dropouts).
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png">
