@@ -31,7 +31,19 @@ As we have not succedded to obtain call center data for motives of privacy, we l
 
 The first thing to do is to reproduce the DNN described in the article: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://link.springer.com/chapter/10.1007/978-3-319-49169-1_25). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
-### 1.Trainning and Validation with public datasources
+### 1.The Data
+The data is [freely available](http://www.dcs.gla.ac.uk/vincia/?p=270)
+_The SSPNet Conflict Corpus (SC 2 ) was collected in the framework of the Social Sig-
+nal Processing Network (SSPNet), the European Network of Excellence on modelling,
+analysis and synthesis of non-verbal communication in social interactions [23]. SC 2
+corpus was used in the conflict challenge organized in the frame of the Interspeech
+2013 computational paralinguistic challenge [13]. It contains 1, 430 clips of 30 seconds
+extracted from a collection of 45 Swiss political debates (in French), 138 subjects in
+total (23 females and 133 males). The clips have been annotated in terms of conflict
+level by roughly 550 assessors, recruited via Amazon Mechanical Turk, and assigned
+a continuous conflict score in the range [−10, +10]._
+
+### 2.Trainning and Validation with public datasources
 
 We first train the network with public data from french political debates. We have files of 30 seconds of audio rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. For training, 30 seconds of audio represent very big vectors, we need to slice the files in intervals of 3 seconds.   We aslo start with a classification model, conflict or no conflict, instead of trying to predict the conflict level. 
 
