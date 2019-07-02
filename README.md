@@ -68,6 +68,8 @@ The validation curve follows very well the training curve which makes us to thin
 
 3. As we do not have much more resources (time and GPU), we select the model trained with 25 epochs to obtain the metrics on test both on chunks and on whole data files (using both majority voting and output average). The results are summarized in the "results" section
 
+4. The notebook DEMO_audio_inference (https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/DEMO_audio_inference.ipynb) plays a couple of audios (conflict and no confict) and shows the results of inference on each 3 second interval. Looking at that, we think that one of the thinks that the model learns is to detect when more than one speaker are talking at the same time or without pauses. If we look at the prediction of the final interval of the conflict audio, we can see that in this case the prediction is o (no conflict) because in this part of the audio, only one speaker is talking.
+
 
 ## Issues
 ### Trainning
