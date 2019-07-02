@@ -31,6 +31,19 @@ As we have not succedded to obtain call center data for motives of privacy, we l
 
 The first thing to do is to reproduce the DNN described in the paper: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://www.researchgate.net/publication/309695949_Automatic_Speech_Feature_Learning_for_Continuous_Prediction_of_Customer_Satisfaction_in_Contact_Center_Phone_Calls). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
+## Model architecture
+
+The architecture of the model is summarized in the following figures
+
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/architecture_images/blocks.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/architecture_images/blocks.png" alt="Network blocks" title="Network blocks" align="center" width:"auto" height:"25%"/>
+</a>
+
+
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/architecture_images/layers.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/architecture_images/layers.png" alt="Network layers" title="Network layers" align="center" width:"auto" height:"25%"/>
+</a>
+
 ### The Data
 The data is [freely available](http://www.dcs.gla.ac.uk/vincia/?p=270)   
 _The SSPNet Conflict Corpus (SC 2 ) was collected in the framework of the Social 
