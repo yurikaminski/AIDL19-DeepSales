@@ -114,33 +114,23 @@ We evaluated the metrics for whole files. We made 2 experiments to predict the c
 
 1. Counting the number of audios in a class.
 
-|Class| Precision | Recall | F1-score | Support  |
-|:-----|:---------:|:-------:|:-----:|-----:|
-|0 | 0.78 |    0.87|  0.82 |      167|
-|1 | 0.78  |   0.65|   0.71|      119|
-
-* Accuracy
-
-|Metrics| Precision | Recall | F1-score | Support  |
-|:-----|:---------:|:-------:|:-----:|-----:|
-|Macro avg | 0.78    |  0.76   |   0.76     |  286|
-|Weighted avg| 0.78    |  0.78   |   0.77     |  286|
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/results_voting.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/results_voting.png" alt="Majority class" title="Majority class" align="center" width:"auto" height:"25%"/>
+</a>
 
           
 
 2. Averaging the values of the classes and classifying it in the end (If the average >= 0.5, then 1; Else 0).
 
-|Class| Precision | Recall | F1-score | Support  |
-|:-----|:---------:|:-------:|:-----:|-----:|
-|0 | 0.79 |    0.88|  0.84 |      167|
-|1 | 0.80  |   0.68|   0.74|      119|
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/results_average.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/results_average.png" alt="Averaging" title="Averaging" align="center" width:"auto" height:"25%"/>
+</a>
 
-* Accuracy
+In the following plot we can verify that the wrong predictions are these corresponding to scores in the middle of the scale, i.e., these which are not clearly conflict or no conflict
 
-|Metrics| Precision | Recall | F1-score | Support  |
-|:-----|:---------:|:-------:|:-----:|-----:|
-|Macro avg | 0.80    |  0.78   |   0.79     |  286|
-|Weighted avg| 0.80    |  0.80  |   0.79     |  286|
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/prediction_fails.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/results_images/prediction_fails.png" alt="Prediction fails" title="Prediction fails" align="center" width:"auto" height:"25%"/>
+</a>
 
 
 ## Checking out the class separation in the last layer
