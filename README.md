@@ -163,3 +163,11 @@ If we plot the individuals map, we can see that even though the separation is no
 
 ## Further work and next steps
 
+### Transfer learning
+One of the experiments of the reference paper was to apply the trained model to another different task. In the paper they try to score the level of satisfaction of customers with the customer center call with another completly different data. Our fisrt idea was also try some kind of transfer learning but at the end we did not have the data and also we did not have more time and GPU time.
+
+Regarding the results and experiments we did, we suspect that the model is able to learn when more than one speakers are talking at the same time and/or with pauses between turns. However, we are not sure if the model is able to catch the "sentiment" (in the sense of voice) of the speaker. It would be great to perform some experiment in this sense, but it was not possible at this time.
+
+### Regression
+Out initial plan was to prepare a model for regresion after the classification, but for the sames reasons as before, we cannot conclude the experiment. We trained a model for regression, but out results are not clear.
+
