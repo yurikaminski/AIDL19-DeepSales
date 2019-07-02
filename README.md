@@ -4,6 +4,11 @@
 
 AIDL19-DeepSales
 ================
+## Team members
+Alberto Ferreira
+Yuri Kaminski
+Pedro González
+
 ## Files summary
 
 |Description| source |
