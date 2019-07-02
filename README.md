@@ -95,16 +95,19 @@ The validation curve follows very well the training curve which makes us to thin
 4. The notebook DEMO_audio_inference (https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/DEMO_audio_inference.ipynb) plays a couple of audios (conflict and no confict) and shows the results of inference on each 3 second interval. Looking at that, we think that one of the thinks that the model learns is to detect when more than one speaker are talking at the same time or without pauses. If we look at the prediction of the final interval of the conflict audio, we can see that in this case the prediction is o (no conflict) because in this part of the audio, only one speaker is talking.
 
 
-## Issues
+## Main Issues
 ### Trainning
-1. Data was too big to fit in memory
-     * Tryed to use tf.records to reduce the use of system memory.
-     * Reduced the batch size from 200 samples to 55 (Original paper used 280)
-     * Expanded GPU capacity from 12 to 16 Gb.
+
+As mentioned previously the data audio data can be very big and it can be a problem to load all the data in memory to do the training. This was our first main problem that we solved by using tf.records.   
+But this was not the only memory problem we faced, since we were trying to replicate the paper we wanted to use the same batch size as they used. That proved to be very dificult.    
+In the paper they used a batch size of 200, we discovered that such batch size is very demanding in terms of GPU memory. We increased the size of our Google Cloud GPU to 16Gb of memory but even with this more powerfull GPU we were limited to use a batch size of only 55, almost only 1/4 of the one used in the paper
+
     
 ### Testing
-1. Incompatibility between tf and keras dataset formats
-    * We changed the input of the network from tf.dataset to Numpy arrays.
+After the training phase was done we strugled to obtain good results when we tried to do some inference with the trained model. 
+Since we were mixing TF.records with a model trained using Keras there are some tricks and changes that need to be done at inference time to make this work.     
+Our solution was to use directly numpy arrays instead tf.records tensors. This proved to work well and we managed to obtain the expected results
+
 
 ## Results
 We evaluated the metrics for whole files. We made 2 experiments to predict the class of an audio file:
