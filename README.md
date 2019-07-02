@@ -29,7 +29,7 @@ As we have not succedded to obtain call center data for motives of privacy, we l
 
 ## Starting point
 
-The first thing to do is to reproduce the DNN described in the article: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://link.springer.com/chapter/10.1007/978-3-319-49169-1_25). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
+The first thing to do is to reproduce the DNN described in the paper: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://www.researchgate.net/publication/309695949_Automatic_Speech_Feature_Learning_for_Continuous_Prediction_of_Customer_Satisfaction_in_Contact_Center_Phone_Calls). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
 ### The Data
 The data is [freely available](http://www.dcs.gla.ac.uk/vincia/?p=270)   
