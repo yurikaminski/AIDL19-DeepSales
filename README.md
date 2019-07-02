@@ -44,9 +44,16 @@ level by roughly 550 assessors, recruited via Amazon Mechanical Turk, and assign
 a continuous conflict score in the range [−10, +10]._  
 
 ### Dataset preparation
-To replicate the paper we need to prepare the data in an identical way. The audio files have a length of 30 seconds each with a sample rate of 48kHz, that represents huge vectors, size 1.440.000. For that reason the files were divided in intervals of 3 seconds. We also downsample the audio files to 8kHz like in the paper. That gives us vectors with size 24.000. We also removed silences from the data but those revealed to be a rare occurrence.
+To replicate the paper we need to prepare the data in an identical way. The audio files have a length of 30 seconds each with a sample rate of 48kHz, that represents huge vectors, size 1.440.000. For that reason the files were divided in intervals of 3 seconds and downsampled to 8kHz like in the paper, that gives us vectors with size 24.000. We also removed silences from the data but those revealed to be a rare occurrence.
 Finally, to have some data augmentation, when splitting the data in 3 seconds intervals we did a interval step of 1 second, that gave us intervals with 2 seconds of overlap and a lot more data to train.
-This step was not mentioned in the paper.
+This step was not mentioned in the paper.   
+
+Even with the downsampling of the data to 8kHz it would still be a problem to load all the data at once to have in memory.
+For that reason we decided to convert and save the data in the format of TF.records. With this we solved the issue of the lack of system memory to handle the data.
+
+### Training
+
+
 
 
 
