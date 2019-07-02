@@ -44,8 +44,13 @@ level by roughly 550 assessors, recruited via Amazon Mechanical Turk, and assign
 a continuous conflict score in the range [−10, +10]._  
 
 ### Dataset preparation
+To replicate the paper we need to prepare the data in an identical way. The audio files have a length of 30 seconds each with a sample rate of 48kHz, that represents huge vectors, size 1.440.000. For that reason the files were divided in intervals of 3 seconds. We also downsample the audio files to 8kHz like in the paper. That gives us vectors with size 24.000. We also removed silences from the data but those revealed to be a rare occurrence.
+Finally, to have some data augmentation, when splitting the data in 3 seconds intervals we did a interval step of 1 second, that gave us intervals with 2 seconds of overlap and a lot more data to train.
+This step was not mentioned in the paper.
 
-We first train the network with public data from french political debates. We have files of 30 seconds of audio rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. For training, 30 seconds of audio represent very big vectors, we need to slice the files in intervals of 3 seconds.   We aslo start with a classification model, conflict or no conflict, instead of trying to predict the conflict level. 
+
+
+We first train the network with public data from french political debates. We have files of 30 seconds of audio rated from -10 to +10 where -10 indicates a high level of conflict and +10 a low level of conflict. For training, 30 seconds of audio represent very big vectors, we need to slice the files in intervals of 3 seconds.  We aslo start with a classification model, conflict or no conflict, instead of trying to predict the conflict level. 
 
 
 
