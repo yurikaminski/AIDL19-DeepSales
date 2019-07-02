@@ -19,7 +19,7 @@ AIDL19-DeepSales
 
 ## The problem
 
-The final goal of this project is to predict Customer Satisfaction Index from calls using end-to-end speech recognition on raw audio files. Classic speech recognition translates each phoneme or word to a specific writen form in order to create words and sentences. In end-to-end speech recognition, we map features directly from speech and use them to make classification or regression models.
+The final goal of this project is to predict Customer Satisfaction Index from calls using ~~end-to-end speech recognition on~~ raw audio files. ~~Classic speech recognition translates each phoneme or word to a specific writen form in order to create words and sentences. In end-to-end speech recognition, we map features directly from speech and use them to make classification or regression models.~~ **This is not  a speech recognition problem/task**
 
 Classic vs. End-to-end images
 
