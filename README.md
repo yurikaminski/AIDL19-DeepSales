@@ -48,8 +48,9 @@ To replicate the paper we need to prepare the data in an identical way. The audi
 Finally, to have some data augmentation, when splitting the data in 3 seconds intervals we did a interval step of 1 second, that gave us intervals with 2 seconds of overlap and a lot more data to train.
 This step was not mentioned in the paper.   
 
-It's important to notice that the conflict score is given for each file, for each 30 seconds of audio. From these 30 seconds we are creating several samples. Because of this we are going to have some samples that are not relevant for for the final score of those 30 seconds. Our assumption is the same as the one mentioned in the paper: _that the effect of training the network by using some of those 3 second ”noisy” instances is mitigated by the mini batch size, the slice context and the num
-ber of epochs employed for the network training_
+It's important to notice that the conflict score is given for each file, for each 30 seconds of audio. From these 30 seconds we are creating several samples. Because of this we are going to have some samples that are not relevant for for the final score of those 30 seconds.    
+Our assumption is the same as the one mentioned in the paper: > that the effect of training the network by using some of those 3 second ”noisy” instances is mitigated by the mini batch size, the slice context and the num
+ber of epochs employed for the network training
 
 
 #### TF.records
