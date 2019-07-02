@@ -32,9 +32,9 @@ As we have not succedded to obtain call center data for motives of privacy, we l
 The first thing to do is to reproduce the DNN described in the article: [Automatic speech feature learning for continuous prediction of customer satisfaction in contact center phone calls](https://link.springer.com/chapter/10.1007/978-3-319-49169-1_25). Which is a relativley simple network, equiped with alternatively convolutional and max pooling layers and ending in a dense layer that predicts the CSI value. In this article we have two stages of trainning.
 
 ### 1.The Data
-The data is [freely available](http://www.dcs.gla.ac.uk/vincia/?p=270)
-_The SSPNet Conflict Corpus (SC 2 ) was collected in the framework of the Social Sig-
-nal Processing Network (SSPNet), the European Network of Excellence on modelling,
+The data is [freely available](http://www.dcs.gla.ac.uk/vincia/?p=270)   
+_The SSPNet Conflict Corpus (SC 2 ) was collected in the framework of the Social 
+Signal Processing Network (SSPNet), the European Network of Excellence on modelling,
 analysis and synthesis of non-verbal communication in social interactions [23]. SC 2
 corpus was used in the conflict challenge organized in the frame of the Interspeech
 2013 computational paralinguistic challenge [13]. It contains 1, 430 clips of 30 seconds
