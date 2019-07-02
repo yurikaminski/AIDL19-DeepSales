@@ -48,15 +48,16 @@ To replicate the paper we need to prepare the data in an identical way. The audi
 Finally, to have some data augmentation, when splitting the data in 3 seconds intervals we did a interval step of 1 second, that gave us intervals with 2 seconds of overlap and a lot more data to train.
 This step was not mentioned in the paper.
 
-#### tf.records
+#### TF.records
 Even with the downsampling of the data to 8kHz it would still be a problem to load all the data at once to have in memory.
 For that reason we decided to convert and save the data in the format of TF.records. With this we solved the issue of the lack of system memory to handle the data.
 
 #### Data leakage
-Because we are dividing each file in diferent samples our first step while preparing the data was to divide the audio files in train, validation and test dataset. We don't want to have some samples of the same file in the training and validation data or, even worse, test data.
-Each dataset, train, validation and test, have different audio files, and the tf.records datasets were created based on those files
+Because we are dividing each file in diferent samples our first step while preparing the data was to divide the audio files in train, validation and test dataset.    
+We don't want to have some samples of the same file in the training and validation data or, even worse, test data.   
+Each dataset, train, validation and test, have different audio files, and the tf.records datasets were created based on those files.
 
-
+#### Training
 
 
 
