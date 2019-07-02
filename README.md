@@ -48,22 +48,24 @@ As we have not succedded to obtain this kind of audio files, we let this part as
 
 We performed different experiments to validsate the final model. As a additiona information training the model on Google Cloud the ETA for each epoch was arround 10 minutes.
 
-1. First, we tried the model to overfit by training the model with a few number of samples and droping the regularization layers (dropouts)
+1. First, we tried the model to overfit by training the model with a few number of samples and droping the regularization layers (dropouts).
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png" alt="Overfitting the model" title="Overfitting the model" align="center" width:"auto" height:"25%"/>
 </a>
 
-2. Then we added the regularization layers and used the validation set to check how the model performs out of training data
+2. Then we added the regularization layers and used the validation set to check how the model performs out of training data.
+
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_10epochs.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_10epochs.png" alt="validation_10epochs" title="validation_10epochs" align="center" width:"auto" height:"25%"/>
 </a>
-The validation curve follows very well the training curve which makes us to think that the binary classification task is more or less easy for this model
+
+The validation curve follows very well the training curve which makes us to think that the binary classification task is more or less easy for this model.
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_25epochs.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_25epochs.png" alt="validation_25epochs" title="validation_25epochs" align="center" width:"auto" height:"25%"/>
 </a>
 
-3. As we do not have much more resources (time and GPU), we select the model trained with 25 epochs to obtain the metrics on test both on chunks and on whole data files (using both majority voting and output average). The results are summarized in the "results" section
 
+3. As we do not have much more resources (time and GPU), we select the model trained with 25 epochs to obtain the metrics on test both on chunks and on whole data files (using both majority voting and output average). The results are summarized in the "results" section
 
 
 ## Issues
