@@ -92,7 +92,13 @@ Each dataset, train, validation and test, have different audio files, and the tf
 
 We performed different experiments to validate the final model. As a additional information training the model on Google Cloud the ETA for each epoch was around 10 minutes.
 
-1. First, we tried the model to overfit by training the model with a few number of samples and droping the regularization layers (dropouts).
+1. First, we tried the model to overfit by training the model with a few number of samples and droping the regularization layers (dropouts). Our first results were very disappointing...(see next image). But we found a problem with the parameters we passed to the model. Indeed, we were using a very small batch size!
+
+<a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/bad_convergence.png">
+    <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/bad_convergence.png" alt="Bad convergence" title="Bad convergence" align="center" width:"auto" height:"25%"/>
+</a>
+
+
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png" alt="Overfitting the model" title="Overfitting the model" align="center" width:"auto" height:"25%"/>
 </a>
