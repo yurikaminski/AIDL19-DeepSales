@@ -98,13 +98,12 @@ We performed different experiments to validate the final model. As a additional 
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/bad_convergence.png" alt="Bad convergence" title="Bad convergence" align="center" width:"auto" height:"25%"/>
 </a>
 
-Once we solve the problem with the batch_size and number of steps, things start to look better.
+2. Once we solve the problem with the batch_size and number of steps, things start to look better. Then we added the regularization layers and used the validation set to check how the model performs out of training data.
 
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/overffiting.png" alt="Overfitting the model" title="Overfitting the model" align="center" width:"auto" height:"25%"/>
 </a>
 
-2. Then we added the regularization layers and used the validation set to check how the model performs out of training data.
 
 <a href="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_10epochs.png">
     <img src="https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/docs/experiments_images/validation_10epochs.png" alt="validation_10epochs" title="validation_10epochs" align="center" width:"auto" height:"25%"/>
@@ -122,6 +121,7 @@ The validation curve follows very well the training curve which makes us to thin
 
 5. The notebook DEMO_audio_inference (https://github.com/yurikaminski/AIDL19-DeepSales/blob/master/DEMO_audio_inference.ipynb) plays a couple of audios (conflict and no confict) and shows the results of inference on each 3 second interval. Looking at that, we think that one of the thinks that the model learns is to detect when more than one speaker are talking at the same time or without pauses. If we look at the prediction of the final interval of the conflict audio, we can see that in this case the prediction is o (no conflict) because in this part of the audio, only one speaker is talking.
 
+6. Finally we used PCA for dimensionality reduction and visualization of the test samples at the final maxout layer (see below).
 
 ## Main Issues
 ### Trainning
